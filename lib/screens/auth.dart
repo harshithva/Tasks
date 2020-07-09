@@ -10,6 +10,6 @@ class Auth extends StatefulWidget {
 class _AuthState extends State<Auth> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: primaryColor, body: AuthForm());
+    return Scaffold(body: AuthForm());
   }
 }
