@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo/pages/home.dart';
+import 'package:todo/screens/home.dart';
+import 'package:todo/screens/auth.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Tasks App'),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => Auth(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/home': (context) => MyHomePage(),
+      },
     );
   }
 }

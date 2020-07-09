@@ -12,7 +12,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -141,6 +141,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                Flexible(
+                  child: ListView(
+                    children: <Widget>[
+                      Container(
+                        height: 50,
+                        color: Colors.amber[600],
+                        child: const Center(child: Text('Entry A')),
+                      ),
+                      Container(
+                        height: 50,
+                        color: Colors.amber[500],
+                        child: const Center(child: Text('Entry B')),
+                      ),
+                      Container(
+                        height: 50,
+                        color: Colors.amber[100],
+                        child: const Center(child: Text('Entry C')),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
